@@ -1,9 +1,3 @@
-En el README.md agregar un listado de al menos 5 sitios de referencia indicando brevemente por qué fueron elegidos
-
-Archivo README.md con:
-• Temática del sitio y público objetivo.
-• Listado de al menos 5 referentes.
-
 /------------ README ------------/
 
 Temática:
