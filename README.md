@@ -1,5 +1,3 @@
-/------------ README ------------/
-
 Temática:
 Mercado online de frutas y verduras
 
