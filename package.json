@@ -1,0 +1,26 @@
+{
+  "name": "proyectoVerduMarket",
+  "version": "1.0.0",
+  "description": "Temática:\r Mercado online de frutas y verduras",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauriciomena/grupo_1_VerduMarket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauriciomena/grupo_1_VerduMarket/issues"
+  },
+  "homepage": "https://github.com/mauriciomena/index",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
