@@ -1,0 +1,12 @@
+/* Ajuste universal. No tocar */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    /* Probando linkeo HTML-CSS */
+    background-color: blue;
+    /* Probando ROBOTO */
+    font-family: 'Roboto', sans-serif;
+}
