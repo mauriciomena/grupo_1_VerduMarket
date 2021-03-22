@@ -1,12 +1,60 @@
 /* Ajuste universal. No tocar */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+section div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container {
+    margin: auto;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 220px 220px 220px;
+    gap: 0px 0px;
+    grid-template-areas:
+    "logo img1 img2 img3"
+    "img4 img5 img2 img6"
+    "large large large large";
 }
 
 
-body {
-    /* Probando linkeo HTML-CSS */
-    background-color: blue;
-    /* Probando ROBOTO */
-    font-family: 'Roboto', sans-serif;
+.large {
+    grid-area: large;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.img4 {
+  grid-area: img4;
+}
+
+.img5 {
+  grid-area: img5;
+}
+
+.img6 {
+  grid-area: img6;
 }
