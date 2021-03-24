@@ -1,60 +1,86 @@
 /* Ajuste universal. No tocar */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
 }
 
-section div img {
-    display: block;
-    width: 100%;
-    height: 100%;
+/* Reglas generales (despúes las borramos) 
+1) Empezamos a desarrollar MOBILE FIRS
+2) Breakpoints media queries:
+-Mobile 360
+-Tablet 769
+-Desktop1100
+3) Paleta de colores (temporal, despues la definimos)
+https://colorhunt.co/palette/258285
+4) Trabajar las clases en ingles
+*/
+
+
+header {
+  width: 100vw;
+  border: 2px solid blue;
 }
 
-.grid-container {
-    margin: auto;
-    width: 75vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 220px 220px 220px;
-    gap: 0px 0px;
-    grid-template-areas:
-    "logo img1 img2 img3"
-    "img4 img5 img2 img6"
-    "large large large large";
+/* Posicionamiento dentro del nav */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 2px solid red;
+  height: 40px;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+li {
+  margin-left: 10px;
+  font-size: 10px;
 }
 
 
-.large {
-    grid-area: large;
+/* Trabajo sobre el menu hamburguesa */
+#menu {
+    display: none;
 }
-
-.logo {
-  grid-area: logo;
+label, label::before, label::after {
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transition: 0.4s;
+    border-radius: 5px;
+    background-color: #161d6f;
 }
-
-.img1 {
-  grid-area: img1;
+label {
+    cursor: pointer;
+    top: 4%;
+    left: 4%;
+    /* top: 50%;
+    left: 50%; */
+    /* margin-left: -50px;
+    margin-top: -7.5px; */
 }
-
-.img2 {
-  grid-area: img2;
+label::before {
+    content: "";
+    transform: translateY(-7px);
 }
-
-.img3 {
-  grid-area: img3;
+label::after {
+    content: "";
+    transform: translateY(7px);
 }
-
-.img4 {
-  grid-area: img4;
+#menu:checked + label {
+    width: 0px;
 }
-
-.img5 {
-  grid-area: img5;
+#menu:checked + label::before {
+    transform: rotate(45deg) translate(0px);
 }
-
-.img6 {
-  grid-area: img6;
+#menu:checked + label::after {
+    transform: rotate(-45deg) translate(0px);
 }
