@@ -1,12 +1,86 @@
 /* Ajuste universal. No tocar */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+}
+
+/* Reglas generales (despúes las borramos) 
+1) Empezamos a desarrollar MOBILE FIRS
+2) Breakpoints media queries:
+-Mobile 360
+-Tablet 769
+-Desktop1100
+3) Paleta de colores (temporal, despues la definimos)
+https://colorhunt.co/palette/258285
+4) Trabajar las clases en ingles
+*/
+
+
+header {
+  width: 100vw;
+  border: 2px solid blue;
+}
+
+/* Posicionamiento dentro del nav */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f6f6f6;
+  border: 2px solid red;
+  height: 40px;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+li {
+  margin-left: 10px;
+  font-size: 10px;
 }
 
 
-body {
-    /* Probando linkeo HTML-CSS */
-    background-color: blue;
-    /* Probando ROBOTO */
-    font-family: 'Roboto', sans-serif;
+/* Trabajo sobre el menu hamburguesa */
+#menu {
+    display: none;
+}
+label, label::before, label::after {
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transition: 0.4s;
+    border-radius: 5px;
+    background-color: #161d6f;
+}
+label {
+    cursor: pointer;
+    top: 4%;
+    left: 4%;
+    /* top: 50%;
+    left: 50%; */
+    /* margin-left: -50px;
+    margin-top: -7.5px; */
+}
+label::before {
+    content: "";
+    transform: translateY(-7px);
+}
+label::after {
+    content: "";
+    transform: translateY(7px);
+}
+#menu:checked + label {
+    width: 0px;
+}
+#menu:checked + label::before {
+    transform: rotate(45deg) translate(0px);
+}
+#menu:checked + label::after {
+    transform: rotate(-45deg) translate(0px);
 }
